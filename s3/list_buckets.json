@@ -1,0 +1,23 @@
+{
+  "credentials": "arn:aws:iam::123456789012:role/apigAwsProxyRole",
+  "httpMethod": "GET",
+  "uri": "arn:aws:apigateway:us-west-2:s3:path//",
+  "responses": {
+    "4\\d{2}": {
+      "statusCode": "400"
+    },
+    "default": {
+      "statusCode": "200",
+      "responseParameters": {
+        "method.response.header.Content-Type": "integration.response.header.Content-Type",
+        "method.response.header.Content-Length": "integration.response.header.Content-Length",
+        "method.response.header.Timestamp": "integration.response.header.Date"
+      }
+    },
+    "5\\d{2}": {
+      "statusCode": "500"
+    }
+  },
+  "passthroughBehavior": "when_no_match",
+  "type": "aws"
+}

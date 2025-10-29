@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 @JacksonXmlRootElement(localName = "Bucket")
 public class Bucket {
+
   @JacksonXmlProperty(localName = "BucketArn")
   private String bucketArn;
 

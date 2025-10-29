@@ -20,7 +20,6 @@ public class ListBucketResult {
   @JacksonXmlProperty(localName = "MaxKeys")
   private Integer maxKeys;
 
-  // IsTruncated
   @JacksonXmlProperty(localName = "IsTruncated")
   private Boolean isTruncated;
 }
